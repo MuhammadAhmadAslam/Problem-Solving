@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+       <meta charset="UTF-8">
+       <meta name="viewport" content="width=device-width, initial-scale=1.0">
+       <title>Problem Solving By Ahmed</title>
+       <link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+       
+       <h1 style="text-align: center; margin-top: 40px;">15 Days Problem Solving Challenge</h1>
+
+       <h1>Day 1</h1>
+       <p style="padding-left: 60px; font-size: 20px;">Write a program that allows for an integer array to be passed in and will then output all of the pairs that sum up to 10.  Please provide a solution that allows for
+              <br>
+               1) output all pairs (includes duplicates and the reversed ordered pairs),
+               <br> 2) output unique pairs only once (removes the duplicates but includes the reversed ordered pairs), and <br>
+               3) output the same combo pair only once (removes the reversed ordered pairs).    For example passing in [1, 1, 2, 4, 4, 5, 5, 5, 6, 7, 9] the following </p>
+
+               <details style="padding-left: 60px; font-size: 24px;">
+                     <summary>View Output 1</summary>
+
+                     <p style="font-size: 21px;">1) let arr = [1,1,2,4,4,5,5,5,6,7,9]
+<br>
+                            let emptyArr = []  
+                            <br>
+                          for(let i = 0; i < arr.length; i++){
+                            <br>
+                          for(let j = 0; j < arr.length; j++){
+                            <br>
+                           if(arr[i] + arr[j] == 10){
+                            <br>
+                             emptyArr.push([arr[i] , arr[j]])
+                             <br>
+                           }
+                           <br>
+                          }
+                          <br>
+                          }
+                     </p>
+               </details>
+
+
+               <details>
+                     <summary>View Output 2</summary>
+               </details>
+
+       <script src="assets/app.js"></script>
+</body>
+</html>
