@@ -1,50 +1,216 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-       <meta charset="UTF-8">
-       <meta name="viewport" content="width=device-width, initial-scale=1.0">
-       <title>Problem Solving By Ahmed</title>
-       <link rel="stylesheet" href="assets/style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Problem Solving By Ahmed</title>
+  <link rel="stylesheet" href="assets/style.css">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f0f0f0;
+      color: #333;
+      margin: 0;
+      padding: 20px;
+    }
+
+    h1 {
+      text-align: center;
+      margin-top: 40px;
+      color: #4a90e2;
+      /* Attractive blue color */
+    }
+
+    p {
+      padding-left: 20px;
+      font-size: 18px;
+      line-height: 1.5;
+      color: #555;
+    }
+
+    details {
+      margin: 20px 0;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      padding: 10px;
+      background-color: #fff;
+    }
+
+    summary {
+      cursor: pointer;
+      font-weight: bold;
+      color: #4a90e2;
+      /* Attractive blue color */
+      font-size: 20px;
+    }
+
+    code {
+      display: block;
+      background-color: #282c34;
+      /* Code editor background */
+      color: #ffffff;
+      /* Code text color */
+      padding: 15px;
+      border-radius: 5px;
+      white-space: pre-wrap;
+      /* Preserve formatting */
+      overflow-x: auto;
+      /* Scroll if too long */
+      font-family: 'Courier New', Courier, monospace;
+      /* Monospace font for code */
+      font-size: 16px;
+    }
+
+    @media (max-width: 600px) {
+      body {
+        padding: 10px;
+      }
+
+      h1 {
+        font-size: 24px;
+      }
+
+      p {
+        font-size: 16px;
+      }
+
+      code {
+        font-size: 14px;
+      }
+    }
+  </style>
 </head>
+
 <body>
-       
-       <h1 style="text-align: center; margin-top: 40px;">15 Days Problem Solving Challenge</h1>
 
-       <h1>Day 1</h1>
-       <p style="padding-left: 60px; font-size: 20px;">Write a program that allows for an integer array to be passed in and will then output all of the pairs that sum up to 10.  Please provide a solution that allows for
-              <br>
-               1) output all pairs (includes duplicates and the reversed ordered pairs),
-               <br> 2) output unique pairs only once (removes the duplicates but includes the reversed ordered pairs), and <br>
-               3) output the same combo pair only once (removes the reversed ordered pairs).    For example passing in [1, 1, 2, 4, 4, 5, 5, 5, 6, 7, 9] the following </p>
+  <h1>15 Days Problem Solving Challenge</h1>
 
-               <details style="padding-left: 60px; font-size: 24px;">
-                     <summary>View Output 1</summary>
+  <h1>Day 1</h1>
+  <p>Write a program that allows for an integer array to be passed in and will then output all of the pairs that sum up
+    to 10. Please provide a solution that allows for
+    <br>
+    1) output all pairs (includes duplicates and the reversed ordered pairs),
+    <br> 2) output unique pairs only once (removes the duplicates but includes the reversed ordered pairs), and <br>
+    3) output the same combo pair only once (removes the reversed ordered pairs). For example passing in [1, 1, 2, 4, 4,
+    5, 5, 5, 6, 7, 9] the following
+  </p>
 
-                     <p style="font-size: 21px;">1) let arr = [1,1,2,4,4,5,5,5,6,7,9]
-<br>
-                            let emptyArr = []  
-                            <br>
-                          for(let i = 0; i < arr.length; i++){
-                            <br>
-                          for(let j = 0; j < arr.length; j++){
-                            <br>
-                           if(arr[i] + arr[j] == 10){
-                            <br>
-                             emptyArr.push([arr[i] , arr[j]])
-                             <br>
-                           }
-                           <br>
-                          }
-                          <br>
-                          }
-                     </p>
-               </details>
+  <details>
+    <summary>View Solution</summary>
+    <code>
+let arr = [1, 1, 2, 4, 4, 5, 5, 5, 6, 7, 9]
+let emptyArr = []
+let uniquePairs = new Set()
+let comboPairs = new Set()
+for (let i = 0; i < arr.length; i++) {
+  for (let j = 0; j < arr.length; j++) {
+    if (arr[i] + arr[j] == 10) {
+      emptyArr.push([arr[i], arr[j]])
+      let pair = [arr[i], arr[j]]
+      uniquePairs.add(pair.toString())
+      let pairing = [arr[i], arr[j]].sort()
+      comboPairs.add(pairing.toString())
+    }
+  }
+}
+    </code>
+  </details>
 
 
-               <details>
-                     <summary>View Output 2</summary>
-               </details>
 
-       <script src="assets/app.js"></script>
+
+
+
+  <h1>Day 2</h1>
+  <p>What will be the output of following code and why ? How Would You Modify the code to print 0 , 1 , 2 , 3 , 4 at
+    interval of 1 Seconds
+    <br>
+    for (var i = 0; i < 5; i++) { <br>
+      setTimeout(function() { <br>
+      console.log(i); <br>
+      }, 1000); <br>
+      } <br>
+  </p>
+
+  <details>
+    <summary>View Solution</summary>
+    <p>To Change The var to let or const because the var is global scope and let and const are block scope</p>
+    <code>
+      for (let i = 0; i < 5; i++) { <br>
+        setTimeout(function() { <br>
+        console.log(i); <br>
+        }, 1000); <br>
+       }
+    </code>
+  </details>
+
+
+
+
+
+
+  <h1>Day 3</h1>
+  <p>
+    Flatten A deeply nested array
+  </p>
+
+  <details>
+    <summary>View Solution</summary>
+    <code>
+
+let NumArr = [1, [2, [3, 4], 5], 6]
+let empNum = []
+for(let i = 0; i < NumArr.length; i++){
+ if (NumArr[i].length) {
+ for(let j = 0; j < NumArr[i].length; j++){
+ if (NumArr[j].length) {
+ for(let k = 0; k < NumArr[i][j].length; k++){
+ empNum.push(NumArr[i][j][k])
+ }
+ }else{
+ empNum.push(NumArr[i][j])
+ }
+ }
+ }
+ else{
+ empNum.push(NumArr[i])
+ }
+ 
+}
+
+console.log(empNum)
+    </code>
+  </details>
+
+
+
+
+
+
+
+
+
+
+
+
+  <h1>Day 4</h1>
+  <p>
+    Rotate Array  [1, 2, 3, 4, 5, 6, 7] and k = 3 Give An Ouput [5,6,7,1,2,3,4]
+  </p>
+
+  <details>
+    <summary>View Solution</summary>
+    <code>
+      let inpArr =  [1, 2, 3, 4, 5, 6, 7]
+      let k = 3;
+      let a =inpArr.splice(-k);
+      let b =inpArr.splice(0,k +1);
+      console.log([...a , ...b]);
+    </code>
+  </details>
+
+  <script src="assets/app.js"></script>
 </body>
+
 </html>
