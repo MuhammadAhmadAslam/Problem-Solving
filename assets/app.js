@@ -42,5 +42,46 @@ for (let i = 0; i < arr.length; i++) {
 
 
 
+// let targetArr = []
+// var twoSum = function (nums, target) {
+//        for (let i = 0; i < nums.length; i++) {
+//               if (nums[i] + nums[i + 1] == target) {
+//                      targetArr.push([nums[i], nums[i + 1]])
+//                      return targetArr
+//               }
+//        }
+// };
 
+// let nums = [1, 5, 3, 6, 8]
+// let target = 9
 
+// let result = twoSum(nums, target)
+// console.log(result, "result")
+// https://leetcode.com/problems/add-two-numbers/description/
+var addTwoNumbers = function (l1, l2) {
+       let firstArr = []
+       let secArr = []
+       for (let i = l1.length; i > 0; i--) {
+              firstArr.push(l1[i - 1])
+       }
+       console.log(firstArr, "firstArr")
+
+       for (let j = l2.length; j > 0; j--) {
+              secArr.push(l2[j - 1])
+       }
+
+       console.log(secArr, "secArr")
+
+       let string1 = firstArr.join("")
+       let string2 = secArr.join("")
+       string1 = parseInt(string1)
+       string2 = parseInt(string2)
+       let resulttring = string1 + string2
+       console.log(resulttring, "resulttring");
+       resulttring = String(resulttring)
+       let resultArr = resulttring.split("")
+       console.log(resultArr, "resultArr");
+       
+};
+
+let result = addTwoNumbers([2, 4, 3], [5, 6, 4])
