@@ -81,7 +81,11 @@ var addTwoNumbers = function (l1, l2) {
        resulttring = String(resulttring)
        let resultArr = resulttring.split("")
        console.log(resultArr, "resultArr");
-       
+
 };
 
 let result = addTwoNumbers([2, 4, 3], [5, 6, 4])
+
+
+
+
