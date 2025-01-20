@@ -142,3 +142,13 @@ let findMissingNumber = (arr) => {
    let string = "0-1"
    let result2 = myAtoi(string)
    console.log(result2 , "result");
+
+
+   var lengthOfLongestSubstring = function(s) {
+       let intoArr = s.split("")
+       let filter = new Set(intoArr)
+       filter = [...filter]
+       let intoString = filter.join("")
+   };
+   
+   lengthOfLongestSubstring("abcabcabcadefdef")
