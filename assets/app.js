@@ -88,4 +88,57 @@ let result = addTwoNumbers([2, 4, 3], [5, 6, 4])
 
 
 
-
+let findMissingNumber = (arr) => {
+       let infiniteArray = Array.from({ length: arr.length + 1 }, (_, i) => i);
+       console.log(infiniteArray, "infinite array");
+   
+       let missingNumber = infiniteArray.find(num => !arr.includes(num));
+       let missingNumber2 = infiniteArray.filter(num => !arr.includes(num));
+       console.log(missingNumber);
+       console.log(missingNumber2, "missing number");
+   };
+   
+   findMissingNumber([3, 7, 1, 2, 8, 4, 5])
+   
+   
+   let str = "Hello World";
+   
+   let reverseString = (str) => {
+       let arr = []
+       for (let i = str.length - 1; i >= 0; i--) {
+           const element = str[i];
+           arr.push(element.toLowerCase())
+           console.log(element);
+       }
+       console.log("called");
+   
+       return arr
+   }
+   reverseString(str)
+   
+   
+   let checkPalindrome = (str) => {
+       str = str.toLowerCase()
+       let arr = []
+       let reverseStr = reverseString(str).join("")
+       console.log(reverseStr, "Reverse str");
+       console.log(str == reverseStr, "condition checked");
+   }
+   
+   checkPalindrome(str)
+   
+   
+   
+   
+   
+   const myAtoi = function(s) {
+     let extracting = Array.from(s).map(item => parseInt(item)).filter(a => !isNaN(a));
+     let intoNumber = extracting.join("")
+     intoNumber = parseInt(intoNumber)
+     return intoNumber
+   };
+   
+   
+   let string = "0-1"
+   let result2 = myAtoi(string)
+   console.log(result2 , "result");
