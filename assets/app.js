@@ -152,3 +152,16 @@ let findMissingNumber = (arr) => {
    };
    
    lengthOfLongestSubstring("abcabcabcadefdef")
+
+
+
+   var singleNumber = function(nums) {
+       let filtering = nums.filter((item) => nums.filter(x => x === item).length == 1)
+       let intoNum = filtering.join("")
+       intoNum = parseInt(intoNum)
+       return intoNum
+   };
+
+   let findSingleNum = singleNumber([2,2,1])
+   console.log(findSingleNum , "find single number");
+   
