@@ -179,17 +179,21 @@ lengthOfLongestSubstring("abcabcabca")
 
 
 var reverse = function (x) {
-       let isNegative = x < 0; 
+       let isNegative = x < 0;
        x = Math.abs(x).toString();
-   
+
        let reversedString = x.split("").reverse().join("");
-   
+
        let reversedNumber = parseInt(reversedString);
-   
+
        if (isNegative) {
-           reversedNumber = -reversedNumber;
+              reversedNumber = -reversedNumber;
+       }
+
+       if (reversedNumber < -(2 ** 31) || reversedNumber > 2 ** 31 - 1) {
+              return 0;
        }
        return reversedNumber;
-   };
+};
 
-   reverse(2323432)
+reverse(2323432)
