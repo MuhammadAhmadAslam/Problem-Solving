@@ -197,3 +197,21 @@ var reverse = function (x) {
 };
 
 reverse(2323432)
+
+
+
+function main() {
+       var t = parseInt(readLine()); // Number of test cases
+       for (var a0 = 0; a0 < t; a0++) {
+              var n = parseInt(readLine());
+              let numberArray = Array.from({ length: n - 1 }, (_, index) => index + 1);
+              let filtering = numberArray.filter((item) => item % 3 === 0 || item % 5 === 0);
+
+              let total = 0;
+              filtering.forEach((num) => {
+                     total += num;
+              });
+
+              console.log(total); // Print each result on a new line
+       }
+}
