@@ -237,15 +237,15 @@ var firstMissingPositive = function (nums) {
        let positiveNums = nums.filter(num => num > 0);
 
        positiveNums.sort((a, b) => a - b);
-       console.log(positiveNums , "psotive nums")
+       console.log(positiveNums, "psotive nums")
 
        let missing = 1;
        for (let num of positiveNums) {
-              console.log("num in loop" , num);
-              console.log("missings in" , missing);
+              console.log("num in loop", num);
+              console.log("missings in", missing);
               if (num === missing) {
                      missing++;
-                     console.log("in if condtion",missing);
+                     console.log("in if condtion", missing);
               } else if (num > missing) {
                      console.log("in else if condtion", missing);
                      break;
@@ -256,4 +256,80 @@ var firstMissingPositive = function (nums) {
 };
 
 
-firstMissingPositive([1,4,5,73,8,2,14,10])
+firstMissingPositive([1, 4, 5, 73, 8, 2, 14, 10])
+
+
+
+
+for (let i = 1; i <= 5; i++) {
+       for (let j = 1; j <= i; j++) {
+                     document.write("*")
+       }
+       document.write("<br>")
+}
+
+document.write("<br>");
+document.write("<br>");
+document.write("<br>");
+
+for (let i = 5; i >= 1; i--) {
+       for (let j = 1; j <= i; j++) {
+              document.write("*")
+       }
+       document.write("<br>")
+}
+
+
+document.write("<br>");
+document.write("<br>");
+document.write("<br>");
+
+for (let i = 1; i <= 7; i++) {
+       for (let j = 1; j <= i; j++) {
+              document.write(j)
+       }
+       document.write("<br>");
+}
+
+document.write("<br>");
+document.write("<br>");
+document.write("<br>");
+
+
+
+for(let i = 7; i >= 1; i--){
+       for (let j = 1; j < i; j++) {
+              document.write(j)
+       }
+       document.write("<br>");
+}
+
+
+
+
+
+
+document.write("<br>");
+document.write("<br>");
+document.write("<br>");
+
+
+
+
+
+
+let output = "";
+for (let i = 0; i <= 8; i++) {
+    for (let j = 1; j < i; j++) {
+        output += "*";
+    }
+    output += "<br>";
+}
+
+for (let i = 8; i >= 1; i--) {
+       for (let j = 1; j < i; j++) {
+              output += "*";   
+       }       
+       output += "<br>";
+}
+document.getElementById("pattern").innerHTML = output;
